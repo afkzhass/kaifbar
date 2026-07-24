@@ -1,0 +1,6 @@
+{
+  "name": "KAIF Lounge Bar - Онлайн Меню",
+  "description": "Электронное меню KAIF лаундж бар г. Астана, пр. Абая 63",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
