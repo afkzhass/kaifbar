@@ -2,12 +2,10 @@ import React from 'react';
 import { MapPin, Phone, Clock, Instagram, Shield, ArrowUp, Flame } from 'lucide-react';
 
 interface FooterProps {
-  setIsCallWaiterOpen: (open: boolean) => void;
   setIsPresentationMode: (mode: boolean) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
-  setIsCallWaiterOpen,
   setIsPresentationMode,
 }) => {
   const scrollToTop = () => {
@@ -33,14 +31,6 @@ export const Footer: React.FC<FooterProps> = ({
             <p className="text-xs text-gray-400 leading-relaxed">
               Электронное интерактивное меню заведения. Изысканная кухня, авторский бар и комфортный отдых.
             </p>
-            <div className="pt-2 flex items-center space-x-2">
-              <button
-                onClick={() => setIsCallWaiterOpen(true)}
-                className="px-3 py-1.5 rounded-lg bg-[#07221b] text-[#e5a93c] border border-[#e5a93c]/30 text-xs font-semibold hover:bg-[#e5a93c]/10"
-              >
-                🔔 Вызвать официанта
-              </button>
-            </div>
           </div>
 
           {/* Location & Contacts */}

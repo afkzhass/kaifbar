@@ -1,14 +1,12 @@
 import React from 'react';
-import { Utensils, Flame, BellRing, BookOpen, MapPin, Sparkles } from 'lucide-react';
+import { Utensils, Flame, BookOpen, MapPin, Sparkles } from 'lucide-react';
 
 interface HeroBannerProps {
-  setIsCallWaiterOpen: (open: boolean) => void;
   setIsPresentationMode: (mode: boolean) => void;
   scrollToMenu: () => void;
 }
 
 export const HeroBanner: React.FC<HeroBannerProps> = ({
-  setIsCallWaiterOpen,
   setIsPresentationMode,
   scrollToMenu,
 }) => {
@@ -53,14 +51,6 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           >
             <Utensils className="w-4 h-4 mr-2" />
             Перейти к блюдам
-          </button>
-
-          <button
-            onClick={() => setIsCallWaiterOpen(true)}
-            className="inline-flex items-center px-5 py-3 rounded-lg bg-[#0d2a22] text-[#e5a93c] border border-[#e5a93c]/40 font-medium text-sm hover:bg-[#13382f] transition-all"
-          >
-            <BellRing className="w-4 h-4 mr-2" />
-            Вызов официанта
           </button>
 
           <button

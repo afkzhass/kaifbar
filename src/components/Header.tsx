@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Search, BellRing, MapPin, Clock, X, PhoneCall } from 'lucide-react';
+import { Search, MapPin, Clock, X, PhoneCall } from 'lucide-react';
 
 interface HeaderProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-  setIsCallWaiterOpen: (open: boolean) => void;
   isPresentationMode: boolean;
   setIsPresentationMode: (mode: boolean) => void;
 }
@@ -12,7 +11,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   searchQuery,
   setSearchQuery,
-  setIsCallWaiterOpen,
   isPresentationMode,
   setIsPresentationMode,
 }) => {
@@ -84,16 +82,6 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Actions */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            {/* Call Waiter Button */}
-            <button
-              onClick={() => setIsCallWaiterOpen(true)}
-              className="inline-flex items-center px-3 py-2 sm:px-3.5 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg bg-gradient-to-r from-[#e5a93c] to-[#c28821] text-black hover:brightness-110 transition-all shadow-md gold-glow"
-            >
-              <BellRing className="w-4 h-4 mr-1.5 animate-bounce" />
-              <span className="hidden sm:inline">Вызвать официанта</span>
-              <span className="sm:hidden">Официант</span>
-            </button>
-
             {/* Mobile Search Toggle */}
             <button
               onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}

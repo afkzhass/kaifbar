@@ -4,7 +4,6 @@ import { HeroBanner } from './components/HeroBanner';
 import { CategoryNav } from './components/CategoryNav';
 import { MenuItemCard } from './components/MenuItemCard';
 import { DishModal } from './components/DishModal';
-import { CallWaiterModal } from './components/CallWaiterModal';
 import { PresentationMode } from './components/PresentationMode';
 import { Footer } from './components/Footer';
 import { MENU_CATEGORIES } from './data/menuData';
@@ -16,7 +15,6 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState<string>('all_categories');
   const [activeFilter, setActiveFilter] = useState<ActiveFilter>('all');
   
-  const [isCallWaiterOpen, setIsCallWaiterOpen] = useState<boolean>(false);
   const [isPresentationMode, setIsPresentationMode] = useState<boolean>(false);
   const [selectedDishModal, setSelectedDishModal] = useState<MenuItem | null>(null);
 
@@ -81,7 +79,6 @@ export default function App() {
       <Header
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        setIsCallWaiterOpen={setIsCallWaiterOpen}
         isPresentationMode={isPresentationMode}
         setIsPresentationMode={setIsPresentationMode}
       />
@@ -89,7 +86,6 @@ export default function App() {
       {/* Hero Section */}
       {!searchQuery && activeCategory === 'all_categories' && activeFilter === 'all' && (
         <HeroBanner
-          setIsCallWaiterOpen={setIsCallWaiterOpen}
           setIsPresentationMode={setIsPresentationMode}
           scrollToMenu={scrollToMenu}
         />
@@ -201,7 +197,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer
-        setIsCallWaiterOpen={setIsCallWaiterOpen}
         setIsPresentationMode={setIsPresentationMode}
       />
 
@@ -209,12 +204,6 @@ export default function App() {
       <DishModal
         item={selectedDishModal}
         onClose={() => setSelectedDishModal(null)}
-      />
-
-      {/* Call Waiter Modal */}
-      <CallWaiterModal
-        isOpen={isCallWaiterOpen}
-        onClose={() => setIsCallWaiterOpen(false)}
       />
 
       {/* Booklet / Presentation Mode Fullscreen overlay */}
