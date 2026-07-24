@@ -36,13 +36,13 @@ export const CallWaiterModal: React.FC<CallWaiterModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
       <div 
-        className="relative w-full max-w-md bg-[#14161b] border border-[#2c3240] rounded-3xl p-6 shadow-2xl space-y-5 dark-card-bg"
+        className="relative w-full max-w-md bg-[#0b2820] border border-[#144337] rounded-3xl p-6 shadow-2xl space-y-5 dark-card-bg"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-[#1e222d] text-gray-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 p-2 rounded-full bg-[#07221b] text-gray-400 hover:text-white transition-colors border border-[#144337]"
         >
           <X className="w-5 h-5" />
         </button>
@@ -61,7 +61,7 @@ export const CallWaiterModal: React.FC<CallWaiterModalProps> = ({
         </div>
 
         {isCalled ? (
-          <div className="py-8 text-center space-y-3 bg-[#181a22] rounded-2xl border border-emerald-500/30">
+          <div className="py-8 text-center space-y-3 bg-[#072a22] rounded-2xl border border-emerald-500/30">
             <div className="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto">
               <Check className="w-7 h-7" />
             </div>
@@ -86,7 +86,7 @@ export const CallWaiterModal: React.FC<CallWaiterModalProps> = ({
                     className={`py-2 rounded-xl text-xs font-bold transition-all ${
                       selectedTable === num
                         ? 'bg-[#e5a93c] text-black shadow-md'
-                        : 'bg-[#181a22] text-gray-400 hover:text-white border border-[#2a2f3d]'
+                        : 'bg-[#07221b] text-gray-300 hover:text-white border border-[#144337]'
                     }`}
                   >
                     №{num}
@@ -99,7 +99,7 @@ export const CallWaiterModal: React.FC<CallWaiterModalProps> = ({
                     className={`py-2 rounded-xl text-[10px] font-bold transition-all ${
                       selectedTable === vip
                         ? 'bg-[#e5a93c] text-black shadow-md'
-                        : 'bg-[#181a22] text-amber-400 border border-amber-500/30'
+                        : 'bg-[#07221b] text-amber-400 border border-amber-500/30'
                     }`}
                   >
                     {vip}
@@ -121,7 +121,7 @@ export const CallWaiterModal: React.FC<CallWaiterModalProps> = ({
                     className={`flex items-center space-x-2 p-3 rounded-xl text-xs text-left font-medium transition-all border ${
                       selectedReason === r.id
                         ? 'bg-[#e5a93c]/15 text-[#e5a93c] border-[#e5a93c] font-semibold'
-                        : 'bg-[#181a22] text-gray-300 border-[#2a2f3d] hover:border-gray-500'
+                        : 'bg-[#07221b] text-gray-300 border-[#144337] hover:border-gray-500'
                     }`}
                   >
                     <span className="text-base">{r.icon}</span>

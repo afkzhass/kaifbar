@@ -13,7 +13,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   scrollToMenu,
 }) => {
   return (
-    <section className="relative overflow-hidden bg-[#0c0d10] border-b border-[#222630] py-12 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#061c16] border-b border-[#123e32] py-12 sm:py-20 lg:py-24">
       {/* Background Image Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none filter blur-sm scale-105"
@@ -21,11 +21,11 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80')`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-[#0c0d10]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#061c16] via-[#061c16]/80 to-transparent pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
         {/* Subtle Badge */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#181b22] border border-[#e5a93c]/30 text-[#e5a93c] text-xs font-medium mb-6">
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#0b2820] border border-[#e5a93c]/30 text-[#e5a93c] text-xs font-medium mb-6">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Добро пожаловать в KAIF Lounge Bar</span>
         </div>
@@ -57,7 +57,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
           <button
             onClick={() => setIsCallWaiterOpen(true)}
-            className="inline-flex items-center px-5 py-3 rounded-lg bg-[#1a1d26] text-[#e5a93c] border border-[#e5a93c]/40 font-medium text-sm hover:bg-[#232733] transition-all"
+            className="inline-flex items-center px-5 py-3 rounded-lg bg-[#0d2a22] text-[#e5a93c] border border-[#e5a93c]/40 font-medium text-sm hover:bg-[#13382f] transition-all"
           >
             <BellRing className="w-4 h-4 mr-2" />
             Вызов официанта
@@ -65,7 +65,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
           <button
             onClick={() => setIsPresentationMode(true)}
-            className="inline-flex items-center px-5 py-3 rounded-lg bg-[#14161f] text-gray-300 border border-[#2b3142] font-medium text-sm hover:text-white hover:border-[#e5a93c]/50 transition-all"
+            className="inline-flex items-center px-5 py-3 rounded-lg bg-[#0a231c] text-gray-300 border border-[#164336] font-medium text-sm hover:text-white hover:border-[#e5a93c]/50 transition-all"
           >
             <BookOpen className="w-4 h-4 mr-2 text-[#e5a93c]" />
             Вид буклета
@@ -73,29 +73,29 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
         </div>
 
         {/* Features Strip */}
-        <div className="mt-12 pt-8 border-t border-[#1e222d] grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-gray-400">
-          <div className="flex flex-col items-center p-2 rounded-lg bg-[#12141a]/60 border border-[#1d212c]">
+        <div className="mt-12 pt-8 border-t border-[#123e32] grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-gray-400">
+          <div className="flex flex-col items-center p-2 rounded-lg bg-[#09221b]/80 border border-[#123e32]">
             <MapPin className="w-4 h-4 text-[#e5a93c] mb-1" />
             <span className="font-medium text-gray-200">г. Астана</span>
-            <span className="text-[11px] text-gray-500">пр. Абая 63</span>
+            <span className="text-[11px] text-gray-400">пр. Абая 63</span>
           </div>
 
-          <div className="flex flex-col items-center p-2 rounded-lg bg-[#12141a]/60 border border-[#1d212c]">
+          <div className="flex flex-col items-center p-2 rounded-lg bg-[#09221b]/80 border border-[#123e32]">
             <Flame className="w-4 h-4 text-[#e5a93c] mb-1" />
             <span className="font-medium text-gray-200">Мангал & Гриль</span>
-            <span className="text-[11px] text-gray-500">Шашлыки на углях</span>
+            <span className="text-[11px] text-gray-400">Шашлыки на углях</span>
           </div>
 
-          <div className="flex flex-col items-center p-2 rounded-lg bg-[#12141a]/60 border border-[#1d212c]">
+          <div className="flex flex-col items-center p-2 rounded-lg bg-[#09221b]/80 border border-[#123e32]">
             <Utensils className="w-4 h-4 text-[#e5a93c] mb-1" />
             <span className="font-medium text-gray-200">Восток & Европа</span>
-            <span className="text-[11px] text-gray-500">Широкая кухня</span>
+            <span className="text-[11px] text-gray-400">Широкая кухня</span>
           </div>
 
-          <div className="flex flex-col items-center p-2 rounded-lg bg-[#12141a]/60 border border-[#1d212c]">
+          <div className="flex flex-col items-center p-2 rounded-lg bg-[#09221b]/80 border border-[#123e32]">
             <span className="font-bold text-[#e5a93c] mb-1 text-sm">+10%</span>
             <span className="font-medium text-gray-200">Обслуживание</span>
-            <span className="text-[11px] text-gray-500">Включается в чек</span>
+            <span className="text-[11px] text-gray-400">Включается в чек</span>
           </div>
         </div>
       </div>

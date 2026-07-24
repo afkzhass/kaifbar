@@ -22,25 +22,25 @@ export const DishModal: React.FC<DishModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
       <div 
-        className="relative w-full max-w-lg bg-[#14161b] border border-[#2c3240] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] dark-card-bg"
+        className="relative w-full max-w-lg bg-[#0b2820] border border-[#144337] rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh] dark-card-bg"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/60 text-gray-300 hover:text-white hover:bg-black/80 transition-colors border border-white/10"
+          className="absolute top-4 right-4 z-20 p-2 rounded-full bg-[#07221b]/80 text-gray-300 hover:text-white hover:bg-[#0e3328] transition-colors border border-white/10"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Hero Image */}
-        <div className="relative h-56 sm:h-64 w-full bg-[#1e222d] overflow-hidden flex-shrink-0">
+        <div className="relative h-56 sm:h-64 w-full bg-[#08201a] overflow-hidden flex-shrink-0">
           <img
             src={item.image}
             alt={item.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#14161b] via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0b2820] via-transparent to-black/30" />
 
           {/* Badges Overlay */}
           <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
@@ -90,7 +90,7 @@ export const DishModal: React.FC<DishModalProps> = ({
                     className={`flex items-center justify-between p-3 rounded-xl text-sm transition-all border ${
                       selectedVariant?.id === v.id
                         ? 'bg-[#e5a93c]/15 text-[#e5a93c] border-[#e5a93c] font-semibold'
-                        : 'bg-[#1a1d26] text-gray-300 border-[#262b3a] hover:border-gray-500'
+                        : 'bg-[#07221b] text-gray-300 border-[#144337] hover:border-gray-500'
                     }`}
                   >
                     <span>{v.name}</span>
@@ -105,7 +105,7 @@ export const DishModal: React.FC<DishModalProps> = ({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 bg-[#101217] border-t border-[#222733] flex items-center justify-between gap-4">
+        <div className="p-4 sm:p-5 bg-[#07221b] border-t border-[#123e32] flex items-center justify-between gap-4">
           <div>
             <span className="text-[10px] uppercase tracking-wider text-gray-400 block">
               Стоимость
@@ -117,7 +117,7 @@ export const DishModal: React.FC<DishModalProps> = ({
 
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-xl font-bold text-sm bg-[#1e222d] text-gray-200 border border-[#2a2f3d] hover:bg-[#252b38] hover:text-white transition-all"
+            className="px-6 py-2.5 rounded-xl font-bold text-sm bg-[#0a2f26] text-gray-200 border border-[#144337] hover:bg-[#103a30] hover:text-white transition-all"
           >
             Закрыть
           </button>

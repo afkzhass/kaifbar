@@ -13,10 +13,10 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
   const prevPage = () => setCurrentPage((p) => Math.max(p - 1, 1));
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#08090b] flex flex-col overflow-hidden text-white font-sans animate-fade-in">
+    <div className="fixed inset-0 z-50 bg-[#04120f] flex flex-col overflow-hidden text-white font-sans animate-fade-in">
       
       {/* Top Booklet Bar */}
-      <div className="bg-[#12141a] border-b border-[#222630] px-4 py-3 flex items-center justify-between flex-shrink-0 z-20">
+      <div className="bg-[#071f19] border-b border-[#11382d] px-4 py-3 flex items-center justify-between flex-shrink-0 z-20">
         <div className="flex items-center space-x-3">
           <span className="font-display text-xl font-bold gold-gradient-text">
             KAIF Lounge Bar
@@ -31,7 +31,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="p-1.5 rounded-lg bg-[#1a1d26] border border-[#2a2f3e] disabled:opacity-30 hover:bg-[#252b38] transition-colors"
+            className="p-1.5 rounded-lg bg-[#092b22] border border-[#14483b] disabled:opacity-30 hover:bg-[#0d382c] transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -43,7 +43,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
           <button
             onClick={nextPage}
             disabled={currentPage === totalPages}
-            className="p-1.5 rounded-lg bg-[#1a1d26] border border-[#2a2f3e] disabled:opacity-30 hover:bg-[#252b38] transition-colors"
+            className="p-1.5 rounded-lg bg-[#092b22] border border-[#14483b] disabled:opacity-30 hover:bg-[#0d382c] transition-colors"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -53,7 +53,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
         <div className="flex items-center space-x-2">
           <button
             onClick={() => window.print()}
-            className="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-[#1a1d26] text-xs font-medium border border-[#2a2f3e] hover:text-[#e5a93c]"
+            className="hidden sm:inline-flex items-center px-3 py-1.5 rounded-lg bg-[#092b22] text-xs font-medium border border-[#14483b] hover:text-[#e5a93c]"
           >
             <Printer className="w-3.5 h-3.5 mr-1.5" />
             Печать
@@ -61,7 +61,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
 
           <button
             onClick={onClose}
-            className="p-2 rounded-lg bg-[#1f2330] hover:bg-red-500/20 text-gray-300 hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-[#0b3328] hover:bg-red-500/20 text-gray-300 hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -69,7 +69,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
       </div>
 
       {/* Page Carousel Indicator */}
-      <div className="bg-[#0e1014] border-b border-[#1c202b] px-4 py-2 flex items-center justify-center space-x-1 sm:space-x-2 overflow-x-auto no-scrollbar">
+      <div className="bg-[#051813] border-b border-[#0e2c24] px-4 py-2 flex items-center justify-center space-x-1 sm:space-x-2 overflow-x-auto no-scrollbar">
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((pg) => (
           <button
             key={pg}
@@ -77,7 +77,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
             className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${
               currentPage === pg
                 ? 'bg-[#e5a93c] text-black shadow-md'
-                : 'bg-[#161820] text-gray-400 hover:text-white border border-[#232734]'
+                : 'bg-[#07201a] text-gray-300 hover:text-white border border-[#12382f]'
             }`}
           >
             Стр. {pg}
@@ -87,11 +87,11 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
 
       {/* Main Booklet Slide Container */}
       <div className="flex-1 overflow-y-auto p-4 sm:p-8 flex items-center justify-center">
-        <div className="w-full max-w-5xl bg-[#111317] border border-[#272c3a] rounded-2xl shadow-2xl overflow-hidden min-h-[600px] flex flex-col justify-between relative gold-glow">
+        <div className="w-full max-w-5xl bg-[#07221b] border border-[#14483b] rounded-2xl shadow-2xl overflow-hidden min-h-[600px] flex flex-col justify-between relative gold-glow">
 
           {/* PAGE 1: COVER */}
           {currentPage === 1 && (
-            <div className="relative flex-1 flex flex-col items-center justify-center p-8 text-center overflow-hidden bg-gradient-to-b from-[#14171f] via-[#0f1116] to-[#0a0b0e]">
+            <div className="relative flex-1 flex flex-col items-center justify-center p-8 text-center overflow-hidden bg-gradient-to-b from-[#0a2e24] via-[#07221b] to-[#04130f]">
               <div 
                 className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none filter blur-sm scale-105"
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80')` }}
@@ -240,8 +240,8 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* East Hits */}
-                <div className="p-5 rounded-2xl bg-[#161820] border border-[#272b38] space-y-3">
-                  <h3 className="font-display text-xl font-bold text-[#e5a93c] border-b border-[#222734] pb-2">
+                <div className="p-5 rounded-2xl bg-[#092b22] border border-[#14483b] space-y-3">
+                  <h3 className="font-display text-xl font-bold text-[#e5a93c] border-b border-[#123e32] pb-2">
                     Восточные Хиты
                   </h3>
                   <div className="flex justify-between font-bold text-white text-sm">
@@ -267,8 +267,8 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
                 </div>
 
                 {/* Europe & Asia */}
-                <div className="p-5 rounded-2xl bg-[#161820] border border-[#272b38] space-y-3">
-                  <h3 className="font-display text-xl font-bold text-[#e5a93c] border-b border-[#222734] pb-2">
+                <div className="p-5 rounded-2xl bg-[#092b22] border border-[#14483b] space-y-3">
+                  <h3 className="font-display text-xl font-bold text-[#e5a93c] border-b border-[#123e32] pb-2">
                     Европа & Азия
                   </h3>
                   <div className="flex justify-between font-bold text-white text-sm">
@@ -424,8 +424,8 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-5 rounded-2xl bg-[#161820] border border-[#272b38] space-y-2">
-                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#222734] pb-1.5">
+                <div className="p-5 rounded-2xl bg-[#092b22] border border-[#14483b] space-y-2">
+                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#123e32] pb-1.5">
                     Кофейная Карта
                   </h3>
                   <div className="flex justify-between text-xs font-semibold">
@@ -446,8 +446,8 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-[#161820] border border-[#272b38] space-y-2">
-                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#222734] pb-1.5">
+                <div className="p-5 rounded-2xl bg-[#092b22] border border-[#14483b] space-y-2">
+                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#123e32] pb-1.5">
                     Лимонады & Соки
                   </h3>
                   <div className="flex justify-between text-xs font-semibold">
@@ -468,8 +468,8 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
                   </div>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-[#161820] border border-[#272b38] space-y-2">
-                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#222734] pb-1.5">
+                <div className="p-5 rounded-2xl bg-[#092b22] border border-[#14483b] space-y-2">
+                  <h3 className="font-display text-lg font-bold text-[#e5a93c] border-b border-[#123e32] pb-1.5">
                     Авторский Чай (1л)
                   </h3>
                   <div className="flex justify-between text-xs font-semibold">
@@ -500,9 +500,9 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
                 Барная Карта: Выбор Ценителей
               </h2>
 
-              <div className="overflow-x-auto rounded-xl border border-[#272b38]">
+              <div className="overflow-x-auto rounded-xl border border-[#14483b]">
                 <table className="w-full text-xs text-left">
-                  <thead className="bg-[#181b24] text-[#e5a93c] uppercase text-[10px] tracking-wider border-b border-[#272b38]">
+                  <thead className="bg-[#08231c] text-[#e5a93c] uppercase text-[10px] tracking-wider border-b border-[#123e32]">
                     <tr>
                       <th className="p-3">Наименование</th>
                       <th className="p-3">Категория</th>
@@ -510,7 +510,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
                       <th className="p-3 text-right">Цена</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#202431] text-gray-200">
+                  <tbody className="divide-y divide-[#0e3328] text-gray-200">
                     <tr>
                       <td className="p-3 font-semibold">Jameson / Ballantines</td>
                       <td className="p-3 text-gray-400">Виски</td>
@@ -561,7 +561,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
 
           {/* PAGE 9: THANK YOU */}
           {currentPage === 9 && (
-            <div className="relative flex-1 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-[#14171f] via-[#0f1116] to-[#0a0b0e]">
+            <div className="relative flex-1 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-[#0a2e24] via-[#07221b] to-[#04130f]">
               <div 
                 className="absolute inset-0 bg-cover bg-center opacity-15 pointer-events-none filter blur-sm scale-105"
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80')` }}
@@ -578,7 +578,7 @@ export const PresentationMode: React.FC<PresentationModeProps> = ({ onClose }) =
           )}
 
           {/* Booklet Footer */}
-          <div className="bg-[#0b0c0f] border-t border-[#1c202b] px-6 py-3 text-xs text-gray-500 flex items-center justify-between">
+          <div className="bg-[#051612] border-t border-[#0e2d25] px-6 py-3 text-xs text-gray-400 flex items-center justify-between">
             <span className="flex items-center">
               <MapPin className="w-3.5 h-3.5 mr-1 text-[#e5a93c]" />
               г. Астана, пр. Абая 63

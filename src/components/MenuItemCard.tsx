@@ -20,17 +20,17 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
   return (
     <div 
       onClick={() => onSelectItem(item)}
-      className="group relative flex flex-col justify-between rounded-2xl bg-[#14161b] border border-[#222733] hover:border-[#e5a93c]/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden cursor-pointer dark-card-bg"
+      className="group relative flex flex-col justify-between rounded-2xl bg-[#0b2820] border border-[#144337] hover:border-[#e5a93c]/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden cursor-pointer dark-card-bg"
     >
       {/* Top Image Container */}
-      <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-[#1a1d26]">
+      <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-[#09201a]">
         <img
           src={item.image}
           alt={item.name}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#14161b] via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0b2820] via-transparent to-black/30" />
 
         {/* Badges Overlay */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
@@ -72,7 +72,7 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
           </h3>
 
           {item.description && (
-            <p className="text-xs text-gray-400 line-clamp-2 leading-relaxed mb-3">
+            <p className="text-xs text-gray-300 line-clamp-2 leading-relaxed mb-3">
               {item.description}
             </p>
           )}
@@ -80,7 +80,7 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
 
         {/* Variants Selector if present */}
         {item.variants && item.variants.length > 0 && (
-          <div className="mb-3 pt-2 border-t border-[#222733]" onClick={(e) => e.stopPropagation()}>
+          <div className="mb-3 pt-2 border-t border-[#144337]" onClick={(e) => e.stopPropagation()}>
             <label className="block text-[11px] text-gray-400 mb-1 font-medium">
               Варианты порции:
             </label>
@@ -92,11 +92,11 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
                   className={`flex items-center justify-between px-2.5 py-1 rounded-lg text-xs transition-all ${
                     selectedVariant?.id === variant.id
                       ? 'bg-[#e5a93c]/20 text-[#e5a93c] border border-[#e5a93c]/60 font-medium'
-                      : 'bg-[#1a1d26] text-gray-400 hover:text-gray-200 border border-[#252a38]'
+                      : 'bg-[#07221b] text-gray-300 hover:text-white border border-[#10382d]'
                   }`}
                 >
                   <span className="truncate pr-1">{variant.name}</span>
-                  <span className="font-semibold text-gray-300 whitespace-nowrap">
+                  <span className="font-semibold text-gray-200 whitespace-nowrap">
                     {variant.price.toLocaleString('ru-RU')} ₸
                   </span>
                 </button>
@@ -106,9 +106,9 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
         )}
 
         {/* Footer Price & View Info Button */}
-        <div className="pt-2 flex items-center justify-between border-t border-[#222733]/60">
+        <div className="pt-2 flex items-center justify-between border-t border-[#144337]/60">
           <div>
-            <span className="text-[10px] uppercase tracking-wider text-gray-500 block -mb-0.5">
+            <span className="text-[10px] uppercase tracking-wider text-gray-400 block -mb-0.5">
               Цена
             </span>
             <span className="font-display text-lg sm:text-xl font-bold text-[#e5a93c]">
@@ -118,7 +118,7 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
 
           <button
             onClick={() => onSelectItem(item)}
-            className="inline-flex items-center justify-center px-3 py-1.5 rounded-xl text-xs font-semibold bg-[#1a1d26] text-gray-300 border border-[#2a2f3e] group-hover:border-[#e5a93c]/50 group-hover:text-white transition-all shadow-sm"
+            className="inline-flex items-center justify-center px-3 py-1.5 rounded-xl text-xs font-semibold bg-[#07221b] text-gray-200 border border-[#144337] group-hover:border-[#e5a93c]/50 group-hover:text-white transition-all shadow-sm"
           >
             <Eye className="w-3.5 h-3.5 mr-1 text-[#e5a93c]" />
             <span>Инфо</span>

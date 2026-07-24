@@ -15,10 +15,10 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#08090c] border-t border-[#1e222d] text-gray-400 pt-12 pb-16">
+    <footer className="bg-[#04120f] border-t border-[#0d3027] text-gray-400 pt-12 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#181b24]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#08231c]">
           
           {/* Brand Info */}
           <div className="space-y-3 md:col-span-1">
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="pt-2 flex items-center space-x-2">
               <button
                 onClick={() => setIsCallWaiterOpen(true)}
-                className="px-3 py-1.5 rounded-lg bg-[#181b22] text-[#e5a93c] border border-[#e5a93c]/30 text-xs font-semibold hover:bg-[#e5a93c]/10"
+                className="px-3 py-1.5 rounded-lg bg-[#07221b] text-[#e5a93c] border border-[#e5a93c]/30 text-xs font-semibold hover:bg-[#e5a93c]/10"
               >
                 🔔 Вызвать официанта
               </button>
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({
             <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider">
               Условия заведения
             </h4>
-            <div className="p-3 rounded-xl bg-[#12141a] border border-[#202431] text-xs space-y-1">
+            <div className="p-3 rounded-xl bg-[#07221b] border border-[#10382e] text-xs space-y-1">
               <p className="text-[#e5a93c] font-bold">Обслуживание: +10%</p>
               <p className="text-[11px] text-gray-400 leading-snug">
                 В сумму счета автоматически включается плата за обслуживание в размере 10%.
@@ -85,13 +85,13 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Back to Top */}
           <div className="flex flex-col justify-between items-start md:items-end">
-            <div className="text-xs text-gray-500">
+            <div className="text-xs text-gray-400">
               <p>Цены указаны в тенге (₸)</p>
             </div>
 
             <button
               onClick={scrollToTop}
-              className="mt-4 md:mt-0 inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#14161f] border border-[#252a38] text-xs text-gray-300 hover:text-white hover:border-[#e5a93c]/50 transition-all"
+              className="mt-4 md:mt-0 inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#07221b] border border-[#123e32] text-xs text-gray-300 hover:text-white hover:border-[#e5a93c]/50 transition-all"
             >
               <ArrowUp className="w-4 h-4 text-[#e5a93c]" />
               <span>Наверх меню</span>
@@ -100,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         </div>
 
-        <div className="pt-6 text-center text-[11px] text-gray-500">
+        <div className="pt-6 text-center text-[11px] text-gray-400">
           © {new Date().getFullYear()} KAIF Lounge Bar. Все права защищены.
         </div>
 

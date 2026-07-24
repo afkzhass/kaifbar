@@ -75,7 +75,7 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen bg-[#0b0c0e] text-[#e2e8f0] flex flex-col font-sans selection:bg-[#e5a93c] selection:text-black">
+    <div className="min-h-screen bg-[#061814] text-[#e2e8f0] flex flex-col font-sans selection:bg-[#e5a93c] selection:text-black">
       
       {/* Header */}
       <Header
@@ -111,7 +111,7 @@ export default function App() {
         
         {/* Active Search / Filter Banner */}
         {(searchQuery || activeFilter !== 'all' || activeCategory !== 'all_categories') && (
-          <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-[#14161c] border border-[#232734]">
+          <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-[#0c2620] border border-[#184539]">
             <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-300">
               <span>Найдено позиций: <strong className="text-[#e5a93c]">{totalVisibleItems}</strong></span>
               {searchQuery && (
@@ -135,7 +135,7 @@ export default function App() {
         {/* Empty Search Results */}
         {filteredCategories.length === 0 ? (
           <div className="py-20 text-center space-y-4 max-w-md mx-auto">
-            <div className="w-16 h-16 bg-[#161820] text-[#e5a93c] rounded-full flex items-center justify-center mx-auto border border-[#272b38]">
+            <div className="w-16 h-16 bg-[#0c2620] text-[#e5a93c] rounded-full flex items-center justify-center mx-auto border border-[#184539]">
               <SearchX className="w-8 h-8" />
             </div>
             <h3 className="font-display text-2xl font-bold text-white">
@@ -164,7 +164,7 @@ export default function App() {
               <section key={category.id} className="space-y-5 scroll-mt-28" id={category.id}>
                 
                 {/* Category Header Title */}
-                <div className="flex items-end justify-between border-b border-[#222733] pb-3">
+                <div className="flex items-end justify-between border-b border-[#184539] pb-3">
                   <div>
                     <h2 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide">
                       {category.title}

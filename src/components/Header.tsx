@@ -19,9 +19,9 @@ export const Header: React.FC<HeaderProps> = ({
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0c0d10]/95 backdrop-blur-md border-b border-[#222630]">
+    <header className="sticky top-0 z-40 bg-[#071f19]/95 backdrop-blur-md border-b border-[#123e32]">
       {/* Top Bar with info */}
-      <div className="hidden sm:block bg-[#12141a] text-xs text-gray-400 py-1.5 border-b border-[#1c202a]">
+      <div className="hidden sm:block bg-[#0a2720] text-xs text-gray-400 py-1.5 border-b border-[#11382d]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           <div className="flex items-center space-x-6">
             <span className="flex items-center text-gray-300">
@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({
               placeholder="Поиск блюда, напитка, шашлыка..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#161820] text-sm text-gray-200 pl-10 pr-10 py-2.5 rounded-full border border-[#2c3240] focus:outline-none focus:border-[#e5a93c] focus:ring-1 focus:ring-[#e5a93c] transition-all placeholder:text-gray-500"
+              className="w-full bg-[#0c2a22] text-sm text-gray-200 pl-10 pr-10 py-2.5 rounded-full border border-[#184a3c] focus:outline-none focus:border-[#e5a93c] focus:ring-1 focus:ring-[#e5a93c] transition-all placeholder:text-gray-400"
             />
             {searchQuery && (
               <button
@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Search Toggle */}
             <button
               onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
-              className="md:hidden p-2 text-gray-300 hover:text-white rounded-lg bg-[#181b22] border border-[#2a2f3d]"
+              className="md:hidden p-2 text-gray-300 hover:text-white rounded-lg bg-[#0e2c24] border border-[#184a3c]"
             >
               <Search className="w-4 h-4" />
             </button>
@@ -106,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Mobile Search Bar Expandable */}
         {isMobileSearchOpen && (
-          <div className="md:hidden py-3 border-t border-[#222630] transition-all">
+          <div className="md:hidden py-3 border-t border-[#123e32] transition-all">
             <div className="relative">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
               <input
@@ -115,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 autoFocus
-                className="w-full bg-[#161820] text-sm text-gray-200 pl-10 pr-10 py-2.5 rounded-lg border border-[#e5a93c]/50 focus:outline-none"
+                className="w-full bg-[#0c2a22] text-sm text-gray-200 pl-10 pr-10 py-2.5 rounded-lg border border-[#e5a93c]/50 focus:outline-none"
               />
               {searchQuery && (
                 <button
